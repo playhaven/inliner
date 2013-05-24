@@ -10,7 +10,7 @@
     "web": "http://github.com/remy"
   },
   "dependencies": {
-    "jsdom": "latest",
+    "jsdom": "https://github.com/playhaven/jsdom#0.2.14-ph",
     "uglify-js": "1.2.2",
     "commander": "0.5.1"
   },
