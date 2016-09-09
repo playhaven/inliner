@@ -82,7 +82,11 @@ function Inliner(url, options, callback) {
       try { 
 
       jsdom.env(html, '', [
-        'http://code.jquery.com/jquery.min.js'
+        // NOTE: Changing this for Upsight. Our legacy usage of inliner
+        // involves running a local HTTP server and making requests against
+        // that, so we can do things offline. This likely won't be helpful
+        // for anyone else.
+        'http://127.0.0.1:8080/node_modules/inliner/jquery.min.js'
       ], function(errors, window) {
         // remove jQuery that was included with jsdom
         window.$('script:last').remove();
